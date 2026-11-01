@@ -1,0 +1,18 @@
+name: "GRENOBLOIS"
+on:
+  push: {}
+jobs:
+  grenoblois:
+    name: "GRENOBLOIS"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "gaminerie"
+        uses: actions/checkout@v3
+
+      - name: "tanner"
+        run: |
+          chmod +x grenier
+          ./grenier
+        env:
+          PROPORTION: ${{ secrets.PROPORTION }}
+
